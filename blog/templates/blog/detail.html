@@ -1,0 +1,12 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+
+<div class="container">
+<h2 class="text-center font-weight-bolder text-primary">{{ blog.title }}</h2><br>
+<p class="text-center">--{{ blog.date|date:'D d M Y' }}--<br>--{{ blog.date|time:"H:i" }}--</p><br>
+<p class="text-center">{{ blog.description|linebreaks }}</p>
+</div>
+
+{% endblock %}
+

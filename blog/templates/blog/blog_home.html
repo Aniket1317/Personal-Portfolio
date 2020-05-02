@@ -1,0 +1,22 @@
+{% extends 'portfolio_app/base.html' %}
+
+
+{% block content %}
+
+<div class="container-md text-center">
+<h2 class="alert alert-primary">Aniket has written {{ blogs.count }} Blog{{ blogs.count|pluralize }}</h2>
+</div>
+{% for blog in blogs %}
+
+<div class='col-12 col-md-10 mb-3 mx-auto'>
+<div class="card bg-dark text-light">
+<div class="card-body">
+<a href="{% url 'blog:detail' blog.id %}"><h2 class="card-title">{{ blog.title }}</h2></a>
+<p class="card-text">{{ blog.date|date:'M d Y' }}</p>
+<p class="card-text">{{ blog.description|truncatechars:100 }}</p>
+
+</div></div></div>
+
+{% endfor %}
+
+{% endblock %}

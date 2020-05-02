@@ -1,0 +1,40 @@
+{% extends 'portfolio_app/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="width: 30rem; ">
+
+	<img class="rounded mx-auto d-block" src="{% static 'portfolio_app/ar.jpg' %}" height="400" width="450"><br>
+	<div class="card-body">
+	<h3 class="text-center">Hey there!! My name is Aniket Raj and I am a student. I am studying in KIIT University, Bhubaneswar</h3>
+	</div>
+
+</div></div><br><br>
+
+<div class="p-3 mb-2 bg-secondary">
+<div class="container">
+<div class="row">
+
+	{% for project in projects %}
+	<div class="col-md-4">
+	<div class="card mb-4" style="width: 18rem;" >
+		<img src="{{ project.image.url }}" height="200">
+		<div class="card-body">
+		<h2 class="col-pl-3">{{ project.title }}</h2>
+		<p>{{ project.description|truncatechars:100 }}</p>
+		
+
+		{% if project.url %}
+			<br><a href="{{ project.url }}" class="btn btn-primary">View</a>
+		{% endif %}
+		</div>
+	</div>
+	</div>
+	{% endfor %}
+
+</div>
+</div>
+{% endblock %}
+
+
