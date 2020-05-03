@@ -10,6 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'portfolio_app/custom.css' %}">
 
     <title>Portfolio</title>
     <link rel="icon" type="image/png" href="{% static 'portfolio_app/logo.jpg' %}">
@@ -25,9 +26,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link text-dark" href="{% static 'portfolio_app/resume.pdf' %}">Resume</a><br>
-      <a class="nav-item nav-link text-dark" href="https://github.com/Aniket1317">Github</a>
-      <a class="nav-item nav-link text-dark" href="https://linkedin.com/in/aniket-raj-51b05b183">LinkedIn</a>
+      <a class="nav-item nav-link" href="{% static 'portfolio_app/resume.pdf' %}">Resume</a><br>
+      <a class="nav-item nav-link" href="https://github.com/Aniket1317" target="_blank">Github</a>
+      <a class="nav-item nav-link" href="https://linkedin.com/in/aniket-raj-51b05b183" target="_blank">LinkedIn</a>
       <a class="list-group-item list-group-item-action active" href="{% url 'blog:blog_home' %}">Blog</a>
     </div>
     </div>
