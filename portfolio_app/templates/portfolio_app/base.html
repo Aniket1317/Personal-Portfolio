@@ -16,29 +16,27 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'portfolio_app/logo.jpg' %}" sizes="16x16">
   </head>
   <body>
+  <div class="container-fluid">
   <header>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'portfolio_app/logo.jpg' %}" height="40" width="40">
-      <span class="navbar-toggler-icon text-dark">Aniket Raj</span>
+    <nav>
+    <div class="navigation_bar"> 
+    <a href="{% url 'home' %}">
+    <img src="{% static 'portfolio_app/logo.jpg' %}" class="navimg" height="40" width="40">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="{% static 'portfolio_app/resume1.pdf' %}">Resume</a><br>
-      <a class="nav-item nav-link" href="https://github.com/Aniket1317" target="_blank">Github</a>
-      <a class="nav-item nav-link" href="https://linkedin.com/in/aniket-raj-51b05b183" target="_blank">LinkedIn</a>
-      <a class="list-group-item list-group-item-action active" href="{% url 'blog:blog_home' %}">Blog</a>
+    <a href="{% url 'home' %}" class="navcon">Aniket Raj</a>
+    <a href="{% static 'portfolio_app/resume1.pdf' %}" class="navcon">Resume</a>
+    <a href="https://github.com/Aniket1317" class="navcon" target="_blank">Github</a>
+    <a href="https://linkedin.com/in/aniket-raj-51b05b183" class="navcon" target="_blank">LinkedIn</a>
+    <a href="{% url 'blog:blog_home' %}" class="badge badge-dark navcont">BLOG</a>
     </div>
-    </div>
-  </div>
-  </nav>
+    </nav>
   </header>
+  </div>
 
-
-      {% block content %}
-      {% endblock %}
+      <div class='container-fluid'>
+         {% block content %}
+            {% endblock %}
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
